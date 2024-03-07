@@ -1,0 +1,198 @@
+/* 
+* {
+    margin: auto;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+/* .form{
+  padding-top: 100px;
+} */
+/* .form input {
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    font-size: 24px;
+}
+
+.form button {
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    font-size: 30px;
+
+}
+.table{
+    padding-top: 100px;
+}
+.table td {
+    border: 1px solid black;
+} */
+/* .table button{
+   width: 100px;
+   height: 30px;
+   background-color:bisque;
+} */
+
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.main-div {
+    width: max-content;
+    height: auto;
+    background-color: hsl(206, 21%, 94%);
+    display: grid;
+    place-items: center;
+}
+
+.center_div {
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.center_div::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+}
+
+.form-div {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    padding: 40px;
+    gap: 5px;
+    /* border: 1px solid grey; */
+    background-color: aliceblue
+}
+
+
+.input-box input {
+    border: 1px solid rgb(222, 217, 217);
+    padding: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.input-box input:focus {
+    padding: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    border-bottom-style: hsl(228, 100%, 35%);
+    border-bottom-style: rgb(49, 27, 148);
+}
+
+.table-div {
+    margin-top: 50px;
+    border: 2px solid darkgreen;
+}
+
+thead tr {
+    border-collapse: collapse;
+    border: 1px solid darkgreen;
+    background-color: rgb(8, 96, 8);
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+
+.form-div,
+.table-div {
+    padding: 0 15px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Responsive table */
+@media screen and (max-width: 600px) {
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Responsive Form */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Button */
+.btn {
+    display: block;
+    width: 100%;
+}
+
+/* Utility Classes */
+.mt-20 {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .input-box,
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.pagination-div{
+    display: flex;
+    justify-content: right;
+    padding: 50px;
+}
