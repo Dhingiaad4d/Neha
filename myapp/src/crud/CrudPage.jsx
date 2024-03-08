@@ -87,10 +87,10 @@ const CrudPage = () => {
     }
         return (
             <div>
-                <div>
+                <div className='container'>
                     <div className='form-div p-5'>
                         <form onSubmit={handleSubmit} className='form' >
-                            <div className='input-box' style={{ marginBottom: "5px" }} >
+                            <div className='input-box' style={{ marginBottom: "2px" }} >
                                 {/* <label className='text-left' htmlFor="username">Name</label> */}
                                 <input type="text" name='name' id='username' className='form-control' placeholder='Name' value={values.name} onChange={handleChange} onBlur={handleBlur} />
                             </div>
