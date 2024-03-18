@@ -86,9 +86,9 @@ const CrudPage = () => {
 
     }
         return (
-            <div>
+            <div className='mt-100'>
                 <div className='container'>
-                    <div className='form-div p-5'>
+                    <div className='form-div p-5 mt-100'>
                         <form onSubmit={handleSubmit} className='form' >
                             <div className='input-box' style={{ marginBottom: "2px" }} >
                                 {/* <label className='text-left' htmlFor="username">Name</label> */}

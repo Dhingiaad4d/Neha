@@ -14,11 +14,12 @@ export const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        debugger
+        
         console.log(user, "user data")
         dispatch(fetchLogin(user))
         alert("Login Successfully")
-        navigate('/crudPage')
+        debugger
+        navigate('/homepage')
 
     }
     const handleChange = (e) => {
