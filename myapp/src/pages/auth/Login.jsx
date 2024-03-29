@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useDispatch } from "react-redux"
-
 import { fetchLogin } from '../../redux/reducers/AuthSlice'
 import { useNavigate } from 'react-router-dom'
 
@@ -14,7 +13,6 @@ export const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
         console.log(user, "user data")
         dispatch(fetchLogin(user))
         alert("Login Successfully")
@@ -23,7 +21,6 @@ export const Login = () => {
 
     }
     const handleChange = (e) => {
-
         const { name, value } = e.target;
         setUser(prev => ({
             ...prev,
@@ -31,21 +28,19 @@ export const Login = () => {
         }))
     }
 
-
     return (
         <div className='wrapper'>
             <div className='container main'>
                 <div className='center-div'>
-
-                    <div className='row '>
+                    <div className='row'>
                         <div className='col-md-6 side-image'>
-                            {/* <div className="side-image"> */}
-
+                            <div className="side-image">
                             <div className='text'>
                                 <p>Welcome to <i>login page</i></p>
-                                {/* </div> */}
+                                </div>
                             </div>
                         </div>
+                   
                         <div className='col-md-6 right'>
                             <div className='login-input-box'>
                                 <h3>Login Here</h3>
@@ -75,7 +70,6 @@ export const Login = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

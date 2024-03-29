@@ -2,20 +2,20 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div>
-            <footer className='footer bg-dark text-light py-4'>
-                
-                    <div>
-                        <p>Privacy Policy</p>
-                    </div>
-                    <div>
-                        <p>Terms & Conditions</p>
-                    </div>
-                
+        <section className="footer-section mt-5 ">
+            <footer className='footer text-light py-4'>
+
+                <div>
+                    <p>Privacy Policy</p>
+                </div>
+                <div>
+                    <p>Terms & Conditions</p>
+                </div>
+
             </footer>
 
 
-        </div>
+        </section>
     )
 }
 

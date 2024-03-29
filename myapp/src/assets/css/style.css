@@ -1,14 +1,74 @@
-/* login styling */
-
-body{
-    font-family:"Petit Formal Script", cursive,"DM Sans", sans-serif ;
+:root{
+    --pink-color:pink;
+    --background-color:rgb(172, 107, 118);
+    /* --background-color:pink;
+    --background-color:pink;
+    --background-color:pink; */
 }
-.container{
-   max-width: 1400px;
+:root{
+    --pink-color:pink;
+    --background-color:rgb(172, 107, 118);
+    /* --background-color:pink;
+    --background-color:pink;
+    --background-color:pink; */
+}
+.theme-blue{
+    --background-color:rgb(105, 105, 185);
+    --text-background-color: blue;
+    --header-color:rgb(32, 32, 168);
+    --footer-color:rgb(32, 32, 168);
+}
+.theme-pink{
+    --background-color:rgb(241, 217, 221);
+    --text-background-color: rgb(235, 124, 143);
+    --header-color:rgb(246, 137, 155);
+    --footer-color:rgb(246, 137, 155);
+}
+.theme-pink{
+    --background-color:rgb(241, 217, 221);
+    --text-background-color: rgb(235, 124, 143);
+    --header-color:rgb(246, 137, 155);
+    --footer-color:rgb(246, 137, 155);
+}
+.theme-red{
+    --background-color:rgb(247, 130, 130);
+    --text-background-color: rgb(220, 50, 50);
+    --header-color:rgb(226, 44, 44);
+    --footer-color:rgb(226, 44, 44);
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: 
+    url('../font-family/Great_Vibes/GreatVibes-Regular.ttf') format('truetype'),
+    /* url('../font-family/Passions_Conflict/PassionsConflict-Regular.ttf') format('ttf'); */
+  }
+
+
+
+/* login styling */
+h1,h2,h3,h4,h5{
+    font-family: 'CustomFont' cursive !important;
+}
+
+body {
+    
+    font-family: 'CustomFont' cursive;
+    /* font-family: "Petit Formal Script", cursive, "DM Sans", sans-serif; */
+}
+
+.container {
+    max-width: 1400px;
+    height: auto;
+    /* background-color: var(--background-color); */
+
 }
 
 
 /*********** header ***********/
+.navbar-box{
+    background-color:var(--header-color) !important;
+}
+
 
 .right-side {
     display: flex;
@@ -29,11 +89,9 @@ body{
     min-height: 100vh;
 }
 
-.center-div {
-    margin-top: 150px;
-}
 
 .side-image {
+    max-width: 100%;
     height: 550px;
     background-image: url("../images/loginPageImg.jpg") !important;
     background-position: center !important;
@@ -41,28 +99,17 @@ body{
     background-repeat: no-repeat !important;
     position: relative !important;
     border-radius: 10px 0 0 10px !important;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* .row {
-    width: 900px;
-    height: 550px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
-} */
+}
 
 .img {
     width: 35px;
     top: 30px;
     left: 30px;
     position: absolute;
-}
-
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50;
-    transform: translate(30%, -50%);
 }
 
 .text p {
@@ -80,6 +127,8 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: white;
+
 }
 
 .login-input-box {
@@ -192,18 +241,12 @@ span a:hover {
     i {
         font-size: 17px;
     }
-
-    .row {
-        max-width: 420px;
-        width: 100%;
-    }
 }
-
 
 /************  crud page designing ****************/
 
 * {
-    margin: auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -365,6 +408,13 @@ thead tr {
 
 /* Footer */
 
+.footer-section {
+    background-color: var(--footer-color);
+    bottom: 0px;
+    /* position: fixed; */
+    width: 100%;
+    margin-top: 5rem;
+}
 .footer {
     display: flex;
     justify-content: center;
@@ -442,6 +492,7 @@ thead tr {
     display: flex;
     justify-content: space-evenly;
 }
+
 .home-header h1 {
     font-family: "Old Standard TT", serif;
 }
@@ -503,10 +554,6 @@ ul li {
     border: none;
 }
 
-.row {
-    box-shadow: none;
-}
-
 .wpo-page-title .wpo-breadcrumb-wrap {
     text-align: center;
     display: block;
@@ -538,45 +585,189 @@ ul li {
     text-decoration: none;
 }
 
+.wpo-blog-content .entry-details p {
+    color: #626B72;
+    line-height: 25px;
+}
+
+.tag-share-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag-share-wrap .tag-share1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag-share-wrap .tag-share1 ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.tag-share-wrap .tag-share1 ul li {
+    margin: 2px;
+}
+
+.left-tag-ul,
+.right-tag-ul {
+    margin-top: 13px;
+}
+
+.tag-share-wrap .tag-share1 span {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "DM Sans", sans-serif;
+}
+
+.tag-share-wrap .left-tag .left-tag-ul a {
+    color: #1d2327;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    padding: 5px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 12px;
+    border: 1px solid rgb(240, 236, 236);
+}
+
+.tag-share-wrap .right-tag .right-tag-ul a {
+    color: #1d2327;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid rgb(240, 236, 236);
+}
+
+.tag-share-wrap .left-tag .left-tag-ul a:hover {
+    color: white;
+    background-color: rgb(65, 88, 208);
+}
+
+/* .tag-share-wrap .right-tag .right-tag-ul a:hover {
+    color: white;
+    background-color: rgb(65, 88, 208);
+} */
+.icon-class:hover,
+.tag-share-wrap .right-tag .right-tag-ul a:hover {
+    color: white;
+    background-color: rgb(65, 88, 208);
+}
+
+.comment-respond {
+    border: 1px solid rgba(59, 57, 57, 0.2);
+    padding: 40px 60px;
+    box-shadow: 0px 6px 20.1px 4.9px rgb(176 191 238 / 12%);
+
+}
+
+.comment-respond h3 {
+    font-family: "Old Standard TT", serif;
+}
+
+.comment-respond form input {
+    background-color: #f9f9f9;
+    border: 1px solid #E3E3E3;
+    padding: 5px;
+    height: 55px;
+}
+
+.comment-respond form textarea {
+    background-color: #f9f9f9;
+    border: 1px solid #E3E3E3;
+    padding: 5px;
+}
+
+.form-submit button {
+    height: 55px;
+    width: 185px;
+    background-color: #C8A898;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+}
+
 /* blog section */
+
 .wpo-blog-section {
     padding: 120px 0;
 }
+
 .entry-media-ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-left: 0;
 }
-.entry-media-ul li a, .entery-media-ul li {
-   color: #636893;
-   font-size: 20px;
-   font-weight: 400;
+
+.entry-media-ul li a,
+.entery-media-ul li {
+    color: #636893;
+    font-size: 20px;
+    font-weight: 400;
 }
-.entry-details h3{
+
+.blockquote {
+    background-color: #ffeeed;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-left: 4px solid #ff8479;
+    padding: 45px 30px 45px 100px;
+}
+
+.wpo-blog-section .wpo-blog-content .blockquote::before {
+    content: "\f10d";
+    /* Unicode for the Font Awesome icon */
+    font-family: 'Font Awesome 5 Free';
+    /* Use the Font Awesome font family */
+    font-weight: 900;
+    /* Adjust the font weight as needed */
+    margin-right: 5px;
+    /* Adjust spacing as needed */
+    color: #000;
+}
+
+/* .entry-meta h3 {
     font-size: 40px;
     line-height: 1.2em;
     margin: -0.27em 0 0.7em;
     font-weight: 500;
-    font-family:"Old Standard TT", serif ;
+    font-family: "Old Standard TT", serif;
     margin-left: 10px;
     margin-top: 20px;
+} */
 
-}
-.blog-sidebar{
+.blog-sidebar {
     padding-left: 45px;
 }
 
 /* sidebar */
-.widget h3,.widget_categories2 h3,.recent-posts h3{
+
+.widget h3,
+.widget_categories2 h3,
+.recent-posts h3,
+.widget-tag h3 {
     font-size: 23px;
     color: #232f4b;
-    font-family:"Old Standard TT", serif;
+    font-family: "Old Standard TT", serif;
 }
-.widget.hr{
+
+.widget.hr {
     width: 100px;
-    border:2px solid  rgb(200 168 152);;
+    border: 2px solid rgb(200 168 152);
+
 }
-.blog-sidebar .widget h3 hr::before{
+
+.blog-sidebar .widget h3 hr::before {
     content: "";
     background-color: #C8A898;
     width: 55px;
@@ -586,19 +777,20 @@ ul li {
     bottom: 0;
     border-radius: 10px;
 }
-.blog-sidebar .search-widget .searchform input{
+
+.blog-sidebar .search-widget .searchform input {
     position: relative;
 }
 
-.searchform input{
+.searchform input {
     width: 100%;
     height: 70px;
-    background:  #F3F6F6;
+    background: #F3F6F6;
     border: none;
     padding: 6px 50px 6px 20px;
-    ;
 }
-.blog-sidebar .search-widget .searchform button{
+
+.blog-sidebar .search-widget .searchform button {
     background-color: #C8A898;
     border: none;
     width: 50px;
@@ -608,7 +800,187 @@ ul li {
     position: absolute;
     margin-top: 10px;
 }
-.widget_categories2 .category-ul li{
+
+.widget_categories2 .category-ul {
     margin: 20px 20px 20px 0;
     padding-left: 0;
 }
+
+.posts .post .recent-details {
+    color: #1E3446;
+}
+
+.post .recent-details p {
+    color: #1E3446;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.post .recent-details span {
+    color: #9e9c9c;
+    font-family: "DM Sans", sans-serif;
+    /* font-weight: 600; */
+    /* font-size: 16px; */
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 13px;
+}
+
+.tagCloud .tag-cloud-ul {
+    display: inline-block;
+
+}
+
+.tagcloud-ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid rgb(222, 220, 220);
+    background-color: #f5f4f4;
+    border-radius: 50px;
+    font-size: 13px;
+}
+
+.tagcloud-ul li a:hover {
+    color: white;
+    background-color: #C8A898;
+}
+
+.tag-cloud-link {
+    display: inline-block;
+    margin: 5px;
+
+    padding: 3px 13px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    padding-left: 0;
+}
+
+.right-flower-img {
+    transform: scale(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+/* Contact page styling */
+.main-contact-div {
+    height: auto;
+}
+
+.main-contact-div .contact-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget-contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 1100px; */
+    position: relative;
+}
+
+.contact-page {
+    width: 500px;
+    height: 700px;
+    padding: 20px;
+    border: 1px solid #fff;
+    position: relative;
+    /* z-index: 99; */
+    border-radius: 361px 361px 0px 361px;
+    background-color: #2a4940;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-contact-div {
+    width: 92%;
+    height: 600px;
+    border: 2px solid white;
+    border-radius: 355px 355px 0px 355px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page .contact-form {
+    text-align: center;
+}
+
+.contact-page .contact-form input {
+    height: 50px;
+    width: 80%;
+    border-radius: unset;
+    background: transparent;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    border-color: white;
+
+}
+
+.contact-form .submit-btn-box {
+    margin-top: 2rem;
+}
+
+.contact-form .submit-btn-box button {
+    width: 100px;
+    background: white;
+    border-radius: unset;
+}
+
+.widget-contact-page .image-div1 .contact-img1 {
+    position: absolute;
+    top: -17%;
+    right: -3%;
+    transform: rotate(347deg);
+}
+
+.widget-contact-page .image-div2 .contact-img2 {
+    position: absolute;
+    left: -11%;
+    bottom: -19%;
+}
+
+/* About us */
+/* .about-page {
+    padding: 100px;
+} */
+
+.about-page .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content .about-image {
+    border: 1px solid grey;
+    /* padding: 10px; */
+}
+
+.about-right .about-right-side {
+    padding: 20px;
+    background-color: #F9F9F9;
+}
+
+.about-right .about-right-side .right-side-content {
+    border: 1px solid #e7dedf;
+    padding: 40px;
+}
+
+.about-row .about-right {
+    position: absolute;
+    right: 4%;
+    top: 40%;
+}
+
+.about-right .about-right-side .right-side-content p {
+    font-family: "My Custom Font";
+    font-size: 18px;
+}
+
